@@ -1,0 +1,259 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Microsoft JhengHei;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background: #eee;
+}
+
+#container {
+  margin: 20px auto;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px 2px #aaa;
+  box-shadow: 0 0 10px 2px #aaa;
+}
+
+@media all and (max-width: 576px) {
+  #container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media all and (min-width: 576px) {
+  #container {
+    margin-top: 20px;
+    width: 550px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #container {
+    width: 750px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  #container {
+    width: 970px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  #container {
+    width: 1170px;
+  }
+}
+
+#container #logo {
+  padding: 1rem 15px 0;
+}
+
+#container #logo .title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#container #logo p {
+  margin: 5px auto;
+  color: #e64946;
+  font-size: .85rem;
+  text-align: center;
+}
+
+@media all and (min-width: 992px) {
+  #container #logo .title {
+    display: block;
+    font-size: 2rem;
+  }
+  #container #logo p {
+    text-align: left;
+  }
+}
+
+#container #navbar {
+  width: 100%;
+  background: #2a2a2a;
+}
+
+#container #navbar:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#container #navbar #menu {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#container #navbar #menu .menuli {
+  float: left;
+  position: relative;
+  border-right: 1px solid #404040;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#container #navbar #menu .menuli:hover {
+  background: #e64946;
+}
+
+#container #navbar #menu .menuli:hover .subul {
+  display: block;
+}
+
+#container #navbar #menu .menuli a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: .85rem;
+  text-decoration: none;
+}
+
+#container #navbar #menu .menuli .hasSubul:after {
+  font-family: 'FontAwesome';
+  font-weight: 400;
+  line-height: 1;
+  content: '\f107';
+  margin-left: 5px;
+}
+
+#container #navbar #menu .menuli .subul {
+  display: none;
+  position: absolute;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#container #navbar #menu .menuli .subul li {
+  width: 140%;
+  background: #2a2a2a;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#container #navbar #menu .menuli .subul li:hover {
+  background: #e64946;
+}
+
+#container #content {
+  padding: 30px;
+}
+
+#container #content .title p {
+  font-size: 2rem;
+}
+
+#container #content .contentArea {
+  padding-bottom: 2rem;
+}
+
+#container #content .contentArea img {
+  display: block;
+  width: 100%;
+}
+
+#container #content #joinForm .formGroup {
+  padding: 10px 0;
+}
+
+#container #content #joinForm .formGroup .title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#container #content #joinForm .formGroup .forRadio > label {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+#container #content #joinForm .formGroup input[type="text"] {
+  padding: 4px 6px;
+  width: 100%;
+  background: #f5f5f5;
+  border: 1px solid #dcdcdc;
+  outline: none;
+}
+
+#container #content #joinForm .formGroup .endBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#container #content #joinForm .formGroup .endBtn input[type="submit"], #container #content #joinForm .formGroup .endBtn input[type="reset"] {
+  margin: 0 5px;
+  padding: 8px 20px;
+  background: #e64946;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#container #content #joinForm .formGroup .endBtn input[type="submit"]:hover, #container #content #joinForm .formGroup .endBtn input[type="reset"]:hover {
+  background: #2a2a2a;
+}
+
+@media all and (min-width: 768px) {
+  #container #content #joinForm .formGroup .title {
+    display: inline-block;
+    padding-right: 10px;
+    width: 39%;
+    text-align: right;
+  }
+  #container #content #joinForm .formGroup .radioGroup {
+    display: table;
+    width: 100%;
+  }
+  #container #content #joinForm .formGroup .radioGroup .radioTitle {
+    display: table-cell;
+    width: 39%;
+    text-align: right;
+  }
+  #container #content #joinForm .formGroup .radioGroup .radioTitle .title {
+    width: auto;
+  }
+  #container #content #joinForm .formGroup .radioGroup .forRadio {
+    display: table-cell;
+    width: 60%;
+  }
+  #container #content #joinForm .formGroup input[type="text"] {
+    width: 60%;
+  }
+}
+
+#container #footer {
+  padding: 2rem 0;
+  background: #2e2e2e;
+  color: #999;
+  font-size: .7rem;
+  text-align: center;
+}

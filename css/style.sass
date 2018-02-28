@@ -1,0 +1,194 @@
+*
+  // margin: 0
+  // padding: 0
+  box-sizing: border-box
+  font-family: Microsoft JhengHei
+  font-size: 18px
+
+@mixin xl-w()
+  @media all and (min-width: 1200px)
+    @content
+@mixin lg-w()
+  @media all and (min-width: 992px)
+    @content
+@mixin md-w()
+  @media all and (min-width: 768px)
+    @content
+@mixin sm-w()
+  @media all and (min-width: 576px)
+    @content
+@mixin xs-w()
+  @media all and (max-width: 576px)
+    @content
+
+body
+  margin: 0
+  background: #eee
+
+#container
+  margin: 20px auto
+  // margin-right: auto
+  // margin-left: auto
+  // padding-right: 15px
+  // padding-left: 15px
+  background: #fff
+  box-shadow: 0 0 10px 2px #aaa
+  @include xs-w
+    margin-top: 0px
+    margin-bottom: 0px
+  @include sm-w
+    margin-top: 20px
+    width: 550px
+  @include md-w
+    // margin-top: 10px
+    width: 750px
+  @include lg-w
+    // margin-top: 10px
+    width: 970px
+  @include xl-w
+    // margin-top: 10px
+    width: 1170px
+
+  #logo
+    padding: 1rem 15px 0
+    .title
+      font-size: 1.4rem
+      font-weight: bold
+      display: flex
+      justify-content: center
+      align-items: center
+    p
+      margin: 5px auto
+      // border-top: 1px solid #e5e5e5
+      color: #e64946
+      font-size: .85rem
+      text-align: center
+    @include lg-w
+      .title
+        display: block
+        font-size: 2rem
+      p
+        text-align: left
+
+  #navbar
+    width: 100%
+    background: #2a2a2a
+    &:after
+      content: ''
+      display: block
+      clear: both
+    #menu
+      padding-left: 0
+      list-style-type: none
+      .menuli
+        float: left
+        // padding: 10px 15px
+        position: relative
+        border-right: 1px solid #404040
+        transition: .3s
+        &:hover
+          background: #e64946
+          .subul
+            display: block
+        a
+          display: block
+          padding: 10px 15px
+          color: #fff
+          font-size: .85rem
+          text-decoration: none
+        .hasSubul:after
+              font-family: 'FontAwesome'
+              font-weight: 400
+              line-height: 1
+              content: '\f107'
+              margin-left: 5px
+        .subul
+          display: none
+          position: absolute
+          padding-left: 0
+          list-style-type: none
+          li
+            width: 140%
+            background: #2a2a2a
+            transition: .3s
+            &:hover
+              background: #e64946
+
+  #content
+    padding: 30px
+    .title
+      p
+        font-size: 2rem
+    .contentArea
+      padding-bottom: 2rem
+      img
+        display: block
+        width: 100%
+        // border: 1px solid red
+    #joinForm
+      .formGroup
+        padding: 10px 0
+        .title
+          display: block
+          font-size: 1.1rem
+          font-weight: bold
+        .forRadio
+          > label
+            display: inline-block
+            padding-right: 10px
+        input[type="text"]
+          padding: 4px 6px
+          width: 100%
+          background: #f5f5f5
+          border: 1px solid #dcdcdc
+          outline: none
+        .endBtn
+          display: flex
+          justify-content: center
+          align-items: center
+          input[type="submit"], input[type="reset"]
+            margin: 0 5px
+            padding: 8px 20px
+            background: #e64946
+            border: none
+            border-radius: 5px
+            color: #fff
+            cursor: pointer
+            outline: none
+            transition: .3s
+            &:hover
+              background: #2a2a2a
+      @include md-w
+        .formGroup
+          .title
+            display: inline-block
+            padding-right: 10px
+            width: 39%
+            text-align: right
+          .radioGroup
+            display: table
+            width: 100%
+            .radioTitle
+              display: table-cell
+              width: 39%
+              text-align: right
+              .title
+                width: auto
+            .forRadio
+              display: table-cell
+              width: 60%
+          input[type="text"]
+            width: 60%
+
+
+
+  #footer
+    padding: 2rem 0
+    background: #2e2e2e
+    color: #999
+    font-size: .7rem
+    text-align: center
+
+// #row
+//   margin-right: -15px
+//   margin-left: -15px
